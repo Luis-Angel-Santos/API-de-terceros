@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	background: #1B1D35;
+    background: -webkit-linear-gradient(left,  dodgerblue, black); 
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+a{
+    color: #fff;
+}
+
+.contenido button{
+    display: block;
+    margin: 30px auto;
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #1e90ff;
+    color: #fff;
+}
+
+.contenido button:hover{
+    background-color: #65b3ff;
+}
