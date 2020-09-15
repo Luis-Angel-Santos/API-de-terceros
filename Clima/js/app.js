@@ -43,6 +43,8 @@ function consultarAPI(ciudad, pais){
      const appid='4bb55e5704aec5380422e644d0b6a577';
      const url=`https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appid}`;
 
+    spinner();
+
      fetch(url)
         .then(respuesta=>respuesta.json())
         .then(datos=>{
@@ -96,4 +98,27 @@ function limpiar(){
     while(resultado.firstChild){
         resultado.removeChild(resultado.firstChild);
     }
+}
+
+function spinner(){
+
+ limpiar();
+ const divspinner=document.createElement('div');
+ divspinner.classList.add('sk-circle');
+ divspinner.innerHTML=`
+ 
+    <div class="sk-circle1 sk-child"></div>
+    <div class="sk-circle2 sk-child"></div>
+    <div class="sk-circle3 sk-child"></div>
+    <div class="sk-circle4 sk-child"></div>
+    <div class="sk-circle5 sk-child"></div>
+    <div class="sk-circle6 sk-child"></div>
+    <div class="sk-circle7 sk-child"></div>
+    <div class="sk-circle8 sk-child"></div>
+    <div class="sk-circle9 sk-child"></div>
+    <div class="sk-circle10 sk-child"></div>
+    <div class="sk-circle11 sk-child"></div>
+    <div class="sk-circle12 sk-child"></div>
+ `;
+resultado.appendChild(divspinner);
 }
